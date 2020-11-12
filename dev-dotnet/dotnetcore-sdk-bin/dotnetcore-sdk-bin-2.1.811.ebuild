@@ -10,12 +10,10 @@ HOMEPAGE="https://www.microsoft.com/net/core"
 LICENSE="MIT"
 
 SRC_URI="
-amd64? ( https://download.visualstudio.microsoft.com/download/pr/820db713-c9a5-466e-b72a-16f2f5ed00e2/628aa2a75f6aa270e77f4a83b3742fb8/dotnet-sdk-${PV}-linux-x64.tar.gz )
-arm? ( https://download.visualstudio.microsoft.com/download/pr/e8912d3b-483b-4d6f-bd3a-3066b3194313/20f2261fe4e16e55df4bbe03c65a7648/dotnet-sdk-${PV}-linux-arm.tar.gz )
-arm64? ( https://download.visualstudio.microsoft.com/download/pr/27840e8b-d61c-472d-8e11-c16784d40091/ae9780ccda4499405cf6f0924f6f036a/dotnet-sdk-${PV}-linux-arm64.tar.gz )
+amd64? ( https://download.visualstudio.microsoft.com/download/pr/4281b67c-db32-4e7e-aa67-976a59839b81/75373c7621c37c2ac7a83fc60d415afd/dotnet-sdk-${PV}-linux-x64.tar.gz )
 "
 
-SLOT="5.0"
+SLOT="2.1"
 KEYWORDS="~amd64"
 
 QA_PREBUILT="*"
@@ -49,7 +47,6 @@ src_prepare() {
 	# For current .NET Core versions, all the directories contain versioned files,
 	# but the top-level files (the dotnet binary for example) are shared between versions,
 	# and those are backward-compatible.
-	# The exception from this above rule is packs/NETStandard.Library.Ref which is shared between >=3.0 versions.
 	# These common files are installed by the non-slotted dev-dotnet/dotnetcore-sdk-bin-common
 	# package, while the directories are installed by dev-dotnet/dotnetcore-sdk-bin which uses
 	# slots depending on major .NET Core version.
@@ -57,7 +54,6 @@ src_prepare() {
 
 	# Skip the common files
 	find . -maxdepth 1 -type f -exec rm -f {} \; || die
-	rm -rf ./packs/NETStandard.Library.Ref || die
 }
 
 src_install() {
