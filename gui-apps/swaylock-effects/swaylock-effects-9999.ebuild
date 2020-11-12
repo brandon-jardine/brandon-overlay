@@ -8,13 +8,8 @@ inherit fcaps meson
 DESCRIPTION="Screen locker for Wayland with added effects"
 HOMEPAGE="https://github.com/mortie/swaylock-effects"
 
-if [[ ${PV} == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/mortie/${PN}.git"
-else
-	SRC_URI="https://github.com/swaywm/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
-fi
+inherit git-r3
+EGIT_REPO_URI="https://github.com/mortie/${PN}.git"
 
 LICENSE="MIT"
 SLOT="0"
