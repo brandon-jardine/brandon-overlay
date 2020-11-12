@@ -26,6 +26,7 @@ DEPEND="
 	x11-libs/libxkbcommon
 	gdk-pixbuf? ( x11-libs/gdk-pixbuf:2 )
 	pam? ( sys-libs/pam )
+	!gui-apps/swaylock
 "
 RDEPEND="${DEPEND}"
 BDEPEND="
