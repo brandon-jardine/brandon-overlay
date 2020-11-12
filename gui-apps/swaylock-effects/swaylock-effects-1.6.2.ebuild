@@ -8,13 +8,8 @@ inherit fcaps meson
 DESCRIPTION="Screen locker for Wayland with added effects"
 HOMEPAGE="https://github.com/mortie/swaylock-effects"
 
-if [[ ${PV} == 9999 ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/mortie/${PN}.git"
-else
-	SRC_URI="https://github.com/mortie/${PN}/archive/v1.6-2.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
-fi
+SRC_URI="https://github.com/mortie/swaylock-effects/archive/v1.6-2.tar.gz -> ${P}.tar.gz"
+KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
 
 LICENSE="MIT"
 SLOT="0"
@@ -45,9 +40,8 @@ src_configure() {
 		"-Dbash-completions=true"
 		"-Dwerror=false"
 	)
-	if [[ ${PV} != 9999 ]]; then
-		emesonargs+=("-Dswaylock-version=1.6-2")
-	fi
+
+	emesonargs+=("-Dswaylock-version=1.6-2")
 
 	meson_src_configure
 }

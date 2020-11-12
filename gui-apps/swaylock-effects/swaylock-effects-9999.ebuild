@@ -9,7 +9,7 @@ DESCRIPTION="Screen locker for Wayland with added effects"
 HOMEPAGE="https://github.com/mortie/swaylock-effects"
 
 inherit git-r3
-EGIT_REPO_URI="https://github.com/mortie/${PN}.git"
+EGIT_REPO_URI="https://github.com/mortie/swaylock-effects.git"
 
 LICENSE="MIT"
 SLOT="0"
@@ -40,9 +40,6 @@ src_configure() {
 		"-Dbash-completions=true"
 		"-Dwerror=false"
 	)
-	if [[ ${PV} != 9999 ]]; then
-		emesonargs+=("-Dswaylock-version=${PV}")
-	fi
 
 	meson_src_configure
 }
