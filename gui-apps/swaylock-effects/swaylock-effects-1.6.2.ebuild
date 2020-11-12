@@ -9,6 +9,7 @@ DESCRIPTION="Screen locker for Wayland with added effects"
 HOMEPAGE="https://github.com/mortie/swaylock-effects"
 
 SRC_URI="https://github.com/mortie/swaylock-effects/archive/v1.6-2.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/swaylock-effects-1.6-2"
 KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
 
 LICENSE="MIT"
