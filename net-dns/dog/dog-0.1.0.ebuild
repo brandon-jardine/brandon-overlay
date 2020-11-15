@@ -89,7 +89,5 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-src_configure() {
-	cargo_src_configure --no-default-features
-}
+PATCHES="${FILESDIR}/${PN}-disable_mutagen.patch"
 
