@@ -6,6 +6,7 @@
 EAPI=7
 
 CRATES="
+bottom-0.4.7
 addr2line-0.12.1
 aho-corasick-0.7.10
 ansi_term-0.11.0
