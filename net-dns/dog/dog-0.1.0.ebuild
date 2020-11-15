@@ -92,6 +92,9 @@ RDEPEND=""
 PATCHES="${FILESDIR}/${PN}-disable_mutagen.patch"
 
 src_prepare() {
+	eapply -p1 "${FILESDIR}/${PN}-disable_mutagen.patch"
+	eapply_user
+
 	# Remove man files so we don't depend on pandoc
 	# TODO: fix this
 	rm -rf ${WORKDIR}/${P}/man
