@@ -89,9 +89,3 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-src_compile() {
-	set -- cargo build $(usex debug "" --release) $(ECARGO_ARGS[@]) "@"
-	einfo "${@}"
-	"${@}" || die "cargo build failed"
-}
-
