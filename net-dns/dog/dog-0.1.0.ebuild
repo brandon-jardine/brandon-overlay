@@ -6,6 +6,7 @@
 EAPI=7
 
 CRATES="
+dog-0.1.0
 ansi_term-0.11.0
 ansi_term-0.12.1
 atty-0.2.14
