@@ -6,7 +6,6 @@
 EAPI=7
 
 CRATES="
-dog-0.1.0
 ansi_term-0.11.0
 ansi_term-0.12.1
 atty-0.2.14
@@ -75,7 +74,10 @@ DESCRIPTION="A command-line DNS client"
 # Double check the homepage as the cargo_metadata crate
 # does not provide this value so instead repository is used
 HOMEPAGE="https://github.com/ogham/dog"
-SRC_URI="$(cargo_crate_uris ${CRATES})"
+SRC_URI="
+	$(cargo_crate_uris ${CRATES})
+	https://github.com/ogham/dog/archive/v0.1.0.tar.gz -> ${P}.tar.gz
+"
 RESTRICT="mirror"
 # License set may be more restrictive as OR is not respected
 # use cargo-license for a more accurate license picture
@@ -86,8 +88,4 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-
-src_install() {
-	dobin target/release/dog
-}
 
