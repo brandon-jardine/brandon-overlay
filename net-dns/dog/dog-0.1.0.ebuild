@@ -66,6 +66,7 @@ winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-x86_64-pc-windows-gnu-0.4.0
 winreg-0.6.2
+mutagen
 "
 
 inherit cargo
@@ -73,7 +74,7 @@ inherit cargo
 DESCRIPTION="A command-line DNS client"
 # Double check the homepage as the cargo_metadata crate
 # does not provide this value so instead repository is used
-HOMEPAGE="https://github.com/ogham/dog"
+HOMEPAGE="https://dns.lookup.dog/"
 SRC_URI="
 	$(cargo_crate_uris ${CRATES})
 	https://github.com/ogham/dog/archive/v0.1.0.tar.gz -> ${P}.tar.gz
@@ -88,4 +89,10 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
+
+src_compile() {
+	set -- cargo build $(usex debug "" --release) $(ECARGO_ARGS[@]) "@"
+	einfo "${@}"
+	"${@}" || die "cargo build failed"
+}
 
