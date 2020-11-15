@@ -66,6 +66,7 @@ winapi-0.3.9
 winapi-i686-pc-windows-gnu-0.4.0
 winapi-x86_64-pc-windows-gnu-0.4.0
 winreg-0.6.2
+mutagen-0.1.2
 "
 
 inherit cargo
@@ -88,8 +89,4 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
-
-src_configure() {
-	cargo_src_configure --no-default-features
-}
 
