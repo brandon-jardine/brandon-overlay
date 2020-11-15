@@ -86,3 +86,8 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
+
+src_install() {
+	dobin target/release/dog
+}
+
