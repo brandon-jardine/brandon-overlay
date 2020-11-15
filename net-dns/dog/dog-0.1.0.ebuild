@@ -91,3 +91,7 @@ RDEPEND=""
 
 PATCHES="${FILESDIR}/${PN}-disable_mutagen.patch"
 
+src_compile() {
+	rm -rf ${WORKDIR}/${P}/man
+}
+
