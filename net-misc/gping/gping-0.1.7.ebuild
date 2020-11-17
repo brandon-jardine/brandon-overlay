@@ -6,7 +6,7 @@
 EAPI=7
 
 CRATES="
-gping-0.1.6
+gping-0.1.7
 aho-corasick-0.7.15
 ansi_term-0.11.0
 anyhow-1.0.34
