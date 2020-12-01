@@ -32,7 +32,10 @@ RESTRICT="test"
 COMMON_DEPEND="media-libs/libsdl2
 	media-video/ffmpeg"
 DEPEND="${COMMON_DEPEND}"
-RDEPEND="${COMMON_DEPEND}"
+RDEPEND="
+	${COMMON_DEPEND}
+	dev-util/android-tools
+"
 PDEPEND=""
 
 # Only required for 1.9
