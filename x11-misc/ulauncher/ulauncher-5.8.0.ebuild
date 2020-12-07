@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{6,7,8,9} )
 
-inherit desktop distutils-r1
+inherit desktop distutils-r1 python-r1
 
 DESCRIPTION="Application launcher for Linux"
 HOMEPAGE="https://ulauncher.io"
@@ -43,6 +43,8 @@ RDEPEND="${DEPEND}
 "
 
 BDEPEND="${PYTHON_DEPS}"
+
+PATCHES=("${FILESDIR}"/sh-path.patch)
 
 src_install(){
 	distutils-r1_src_install
