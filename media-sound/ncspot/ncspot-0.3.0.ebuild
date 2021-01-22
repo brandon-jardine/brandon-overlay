@@ -416,3 +416,11 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
+
+PATCHES="${FILESDIR}/${PN}-disable_optional_features.patch"
+
+src_prepare() {
+	eapply -p1 "${FILESDIR}/${PN}-disable_optional_features.patch"
+	eapply_user
+}
+
