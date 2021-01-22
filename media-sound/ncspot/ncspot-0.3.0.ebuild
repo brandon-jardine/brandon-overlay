@@ -399,6 +399,7 @@ xml-rs-0.6.1
 
 termion-1.5.5
 alsa-0.2.2
+cpal-0.13.1
 
 ${P}
 "
