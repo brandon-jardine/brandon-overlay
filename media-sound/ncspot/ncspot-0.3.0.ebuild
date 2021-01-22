@@ -400,6 +400,7 @@ xml-rs-0.6.1
 termion-1.5.5
 alsa-0.2.2
 cpal-0.8.2
+portaudio-rs-0.3.2
 
 ${P}
 "
