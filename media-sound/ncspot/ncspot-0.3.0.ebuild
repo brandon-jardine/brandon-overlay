@@ -396,6 +396,7 @@ x11-clipboard-0.3.3
 xcb-0.8.2
 xi-unicode-0.2.1
 xml-rs-0.6.1
+termion-1.5.5
 ${P}
 "
 
