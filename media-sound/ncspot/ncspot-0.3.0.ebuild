@@ -398,7 +398,7 @@ xi-unicode-0.2.1
 xml-rs-0.6.1
 
 termion-1.5.5
-alsa-0.4.3
+alsa-0.2.2
 
 ${P}
 "
