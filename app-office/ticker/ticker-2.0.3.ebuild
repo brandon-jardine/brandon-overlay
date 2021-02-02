@@ -5,6 +5,14 @@ EAPI=7
 
 inherit go-module
 
+DESCRIPTION="Terminal stock watcher and stock position tracker."
+HOMEPAGE="https://github.com/achannarasappa/ticker"
+RESTRICT="mirror"
+LICENSE="GPL-3"
+
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
+
 EGO_SUM=(
 	"cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw="
 	"cloud.google.com/go v0.34.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw="
