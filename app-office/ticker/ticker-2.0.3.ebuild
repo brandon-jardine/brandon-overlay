@@ -441,10 +441,11 @@ go-module_set_globals
 SRC_URI="http://github.com/achannarasappa/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	${EGO_SUM_SRC_URI}"
 
+src_compile() {
+	go build
+}
 
 src_install() {
-	go build
-
 	dobin ticker
 	dodoc README.md
 }
