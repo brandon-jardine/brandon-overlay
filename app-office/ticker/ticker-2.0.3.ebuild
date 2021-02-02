@@ -443,8 +443,9 @@ SRC_URI="http://github.com/achannarasappa/${PN}/archive/v${PV}.tar.gz -> ${P}.ta
 
 
 src_install() {
-	default_src_install
+	go build
 
-	dobin ${WORKDIR}/ticker
+	dobin ticker
+	dodoc README.md
 }
 
