@@ -9,7 +9,6 @@ DESCRIPTION="An advanced version of the venerable hexdump."
 HOMEPAGE="https://github.com/lptstr/hxd"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 
 BDEPEND=">=app-text/scdoc-1.11.0"
 
