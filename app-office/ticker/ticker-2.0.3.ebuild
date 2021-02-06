@@ -438,7 +438,7 @@ EGO_SUM=(
 
 go-module_set_globals
 
-SRC_URI="http://github.com/achannarasappa/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
+SRC_URI="https://github.com/achannarasappa/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	${EGO_SUM_SRC_URI}"
 
 src_compile() {
@@ -449,4 +449,3 @@ src_install() {
 	dobin ticker
 	dodoc README.md
 }
-
