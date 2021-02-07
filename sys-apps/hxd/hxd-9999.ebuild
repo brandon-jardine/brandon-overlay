@@ -12,7 +12,7 @@ SLOT="0"
 
 BDEPEND=">=app-text/scdoc-1.11.0"
 
-EGIT_REPO_URI="https://github.com/lptstr/hxd.git"
+EGIT_REPO_URI="https://github.com/lptstr/${PN}.git"
 
 src_install() {
 	dobin hxd

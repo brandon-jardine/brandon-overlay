@@ -11,7 +11,7 @@ KEYWORDS="~amd64 ~x86"
 
 BDEPEND=">=app-text/scdoc-1.11.0"
 
-SRC_URI="https://github.com/lptstr/hxd/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/lptstr/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 src_install() {
 	dobin hxd
