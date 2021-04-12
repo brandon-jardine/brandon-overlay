@@ -7,7 +7,7 @@
 -alsa_backend = ["librespot-playback/alsa-backend"]
 -cover = ["ioctl-rs"]
 +#alsa_backend = ["librespot-playback/alsa-backend"]
-+#cover = ["ioctl-rs"]
+ cover = ["ioctl-rs"]
  default = ["share_clipboard", "pulseaudio_backend", "mpris", "notify", "cursive/pancurses-backend"]
  mpris = ["dbus", "dbus-tree"]
  notify = ["notify-rust"]

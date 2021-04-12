@@ -146,6 +146,7 @@ idna-0.1.5
 idna-0.2.2
 indexmap-1.6.2
 instant-0.1.9
+ioctl-rs-0.2.0
 iovec-0.1.4
 ipnet-2.3.0
 itertools-0.8.2
