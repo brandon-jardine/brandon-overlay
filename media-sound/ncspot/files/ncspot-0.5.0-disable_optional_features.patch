@@ -1,22 +1,24 @@
---- a/Cargo.toml	2021-04-11 21:11:22.043869909 -0500
-+++ b/Cargo.toml	2021-04-11 21:12:04.987206199 -0500
-@@ -55,14 +55,14 @@
+--- Cargo.toml	1969-12-31 18:00:00.000000000 -0600
++++ Cargo.toml.new	2021-04-11 21:28:38.933941290 -0500
+@@ -140,16 +140,16 @@
+ version = "0.5"
+ 
  [features]
- share_clipboard = ["clipboard"]
- share_selection = ["clipboard"] # Use the primary selection for sharing - linux only
 -alsa_backend = ["librespot-playback/alsa-backend"]
-+#alsa_backend = ["librespot-playback/alsa-backend"]
- pulseaudio_backend = ["librespot-playback/pulseaudio-backend"]
--rodio_backend = ["librespot-playback/rodio-backend"]
--portaudio_backend = ["librespot-playback/portaudio-backend"]
--termion_backend = ["cursive/termion-backend"]
-+#rodio_backend = ["librespot-playback/rodio-backend"]
-+#portaudio_backend = ["librespot-playback/portaudio-backend"]
-+#termion_backend = ["cursive/termion-backend"]
- mpris = ["dbus", "dbus-tree"]
- notify = ["notify-rust"]
 -cover = ["ioctl-rs"]
++#alsa_backend = ["librespot-playback/alsa-backend"]
 +#cover = ["ioctl-rs"]
  default = ["share_clipboard", "pulseaudio_backend", "mpris", "notify", "cursive/pancurses-backend"]
- 
- [package.metadata.deb]
+ mpris = ["dbus", "dbus-tree"]
+ notify = ["notify-rust"]
+-portaudio_backend = ["librespot-playback/portaudio-backend"]
++#portaudio_backend = ["librespot-playback/portaudio-backend"]
+ pulseaudio_backend = ["librespot-playback/pulseaudio-backend"]
+-rodio_backend = ["librespot-playback/rodio-backend"]
++#rodio_backend = ["librespot-playback/rodio-backend"]
+ share_clipboard = ["clipboard"]
+ share_selection = ["clipboard"]
+-termion_backend = ["cursive/termion-backend"]
++#termion_backend = ["cursive/termion-backend"]
+ [badges.maintenance]
+ status = "actively-developed"
