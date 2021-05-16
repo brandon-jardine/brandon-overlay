@@ -419,7 +419,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-PATCHES="${FILESDIR}/${PN}-0.5.0-disable_optional_features.patch"
+PATCHES="${FILESDIR}/${PN}-disable_optional_features.patch"
 
 src_prepare() {
 	for p in $PATCHES

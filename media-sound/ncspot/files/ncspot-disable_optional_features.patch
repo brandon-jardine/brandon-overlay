@@ -1,11 +1,13 @@
---- a/Cargo.toml	2021-01-13 11:25:18.000000000 -0600
-+++ b/Cargo.toml	2021-01-21 20:42:22.680350438 -0600
-@@ -132,15 +132,15 @@
+--- a/Cargo.toml	1969-12-31 18:00:00.000000000 -0600
++++ b/Cargo.toml	2021-04-11 21:38:39.267315995 -0500
+@@ -140,16 +140,16 @@
  version = "0.5"
  
  [features]
 -alsa_backend = ["librespot-playback/alsa-backend"]
-+# alsa_backend = ["librespot-playback/alsa-backend"]
++#alsa_backend = ["librespot-playback/alsa-backend"]
+-cover = ["ioctl-rs"]
++#cover = ["ioctl-rs"]
  default = ["share_clipboard", "pulseaudio_backend", "mpris", "notify", "cursive/pancurses-backend"]
  mpris = ["dbus", "dbus-tree"]
  notify = ["notify-rust"]
