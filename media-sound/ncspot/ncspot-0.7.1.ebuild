@@ -398,6 +398,7 @@ zerocopy-0.3.0
 zerocopy-derive-0.2.0
 zvariant-2.6.0
 zvariant_derive-2.6.0
+ioctl-rs-0.2.0
 ${P}
 "
 
