@@ -39,6 +39,9 @@ src_configure() {
 		-DENABLE_MPG123=$(usex mp3)
 		-DENABLE_IDLE_SLEEP=OFF # Improves performance
 		-DENABLE_KERNING=ON
+		-DENABLE_DOWNLOAD_EDIT=ON
+		-DENABLE_FRIBIDI=ON
+		-DENABLE_HARFBUZZ=ON
 		-DENABLE_HARFBUZZ_MINIMAL=$(usex system-harfbuzz OFF ON)
 		-DENABLE_FRIBIDI_BUILD=$(usex system-harfbuzz OFF ON)
 	)
