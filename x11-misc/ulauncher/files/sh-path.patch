@@ -1,8 +1,0 @@
---- a/bin/ulauncher-toggle
-+++ b/bin/ulauncher-toggle
-@@ -1,4 +1,4 @@
--#!/usr/bin/sh
-+#!/bin/sh
- 
- dbus-send \
-     --session \

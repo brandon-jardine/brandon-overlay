@@ -44,8 +44,6 @@ RDEPEND="${DEPEND}
 
 BDEPEND="${PYTHON_DEPS}"
 
-PATCHES=("${FILESPATH}"/sh-path.patch)
-
 src_install(){
 	distutils-r1_src_install
 	domenu build/share/applications/${PN}.desktop
