@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -20,7 +20,7 @@ fi
 
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="mp3"
+IUSE="mp3 system-harfbuzz"
 
 DEPEND="
 	dev-libs/libpcre
@@ -29,6 +29,7 @@ DEPEND="
 	media-libs/libsdl2
 	mp3? ( media-sound/mpg123 )
 	sys-libs/zlib
+	system-harfbuzz? ( media-libs/harfbuzz dev-libs/fribidi )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
@@ -37,6 +38,9 @@ src_configure() {
 	local mycmakeargs=(
 		-DENABLE_MPG123=$(usex mp3)
 		-DENABLE_IDLE_SLEEP=OFF # Improves performance
+		-DENABLE_KERNING=ON
+		-DENABLE_HARFBUZZ_MINIMAL=$(usex system-harfbuzz OFF ON)
+		-DENABLE_FRIBIDI_BUILD=$(usex system-harfbuzz OFF ON)
 	)
 
 	cmake_src_configure
