@@ -434,3 +434,12 @@ src_prepare() {
 
 	eapply_user
 }
+
+src_configure() {
+	local myfeatures=(
+		cover
+	)
+
+	cargo_src_configure
+}
+
