@@ -411,6 +411,7 @@ CRATES="
 	zerocopy-derive-0.2.0
 	zvariant-2.8.0
 	zvariant_derive-2.8.0
+	${P}
 "
 
 inherit cargo
