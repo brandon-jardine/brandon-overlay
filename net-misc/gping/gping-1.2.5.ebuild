@@ -73,6 +73,7 @@ CRATES="
 	winapi_forked_icmpapi-0.3.7
 	winping-0.10.1
 	libc-0.2.88
+	bitflags-1.2.1
 	pinger-0.3.6
 	${P}
 "
