@@ -72,6 +72,7 @@ CRATES="
 	winapi-x86_64-pc-windows-gnu-0.4.0
 	winapi_forked_icmpapi-0.3.7
 	winping-0.10.1
+	pinger-0.3.6
 	${P}
 "
 
