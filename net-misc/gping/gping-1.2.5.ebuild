@@ -38,6 +38,7 @@ CRATES="
 	os_info-3.0.7
 	parking_lot-0.11.2
 	parking_lot_core-0.8.5
+	pinger-0.3.6
 	proc-macro-error-1.0.4
 	proc-macro-error-attr-1.0.4
 	proc-macro2-1.0.29
@@ -72,9 +73,6 @@ CRATES="
 	winapi-x86_64-pc-windows-gnu-0.4.0
 	winapi_forked_icmpapi-0.3.7
 	winping-0.10.1
-	libc-0.2.88
-	bitflags-1.2.1
-	pinger-0.3.6
 	${P}
 "
 
