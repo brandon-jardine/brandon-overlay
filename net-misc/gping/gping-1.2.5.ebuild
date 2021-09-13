@@ -87,3 +87,14 @@ SRC_URI="$(cargo_crate_uris)"
 LICENSE="Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD MIT Unlicense"
 SLOT="0"
 KEYWORDS="~amd64"
+
+PATCHES="${FILESDIR}/${PN}-remove_relative_path.patch"
+
+src_prepare() {
+	for p in $PATCHES; do
+		eapply -p1 $p
+	done
+
+	eapply_user
+}
+
