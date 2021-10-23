@@ -20,3 +20,4 @@ DEPEND="dev-python/urwid[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 
 DOCS=( README.rst )
+PATCHES=( "${FILESDIR}/${PN}-0.9.7-respect-paths.patch")
