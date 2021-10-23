@@ -6,7 +6,7 @@ EAPI=7
 inherit cmake optfeature xdg-utils
 
 DESCRIPTION="Desktop GUI client for browsing Geminispace."
-HOMEPAGE="https://gmi.skylake.fi/labrange/"
+HOMEPAGE="https://gmi.skylake.fi/lagrange/"
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
