@@ -21,5 +21,5 @@ src_install() {
 	doman man/minipro.1
 	udev_dorules udev/*.rules
 	dobashcomp bash_completion.d/minipro
-	doins infoic.xml logicic.xml
+	doins infoic.xml
 }
