@@ -15,3 +15,11 @@ KEYWORDS="~amd64"
 
 RDEPEND="virtual/libusb:1"
 DEPEND="${RDEPEND}"
+
+src_install() {
+	dobin minipro miniprohex
+	doman man/minipro.1
+	udev_dorules udev/*.rules
+	dobashcomp bash_completion.d/minipro
+	doins infoic.xml logicic.xml
+}
