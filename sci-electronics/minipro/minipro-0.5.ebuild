@@ -21,5 +21,8 @@ src_install() {
 	doman man/minipro.1
 	udev_dorules udev/*.rules
 	dobashcomp bash_completion.d/minipro
+
+	dodir /usr/share/minipro
+	insinto /usr/share/minipro
 	doins infoic.xml
 }
