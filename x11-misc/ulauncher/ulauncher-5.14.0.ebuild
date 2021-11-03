@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{6,7,8,9} )
 
-inherit desktop distutils-r1 python-r1
+inherit desktop distutils-r1 python-r1 xdg-utils
 
 DESCRIPTION="Application launcher for Linux"
 HOMEPAGE="https://ulauncher.io"
@@ -45,7 +45,15 @@ RDEPEND="${DEPEND}
 
 BDEPEND="${PYTHON_DEPS}"
 
-src_install(){
+src_install() {
 	distutils-r1_src_install
 	domenu build/share/applications/${PN}.desktop
+}
+
+pkg_postinst() {
+	xdg_icon_cache_update
+}
+
+pkg_postrm() {
+	xdg_icon_cache_update
 }
