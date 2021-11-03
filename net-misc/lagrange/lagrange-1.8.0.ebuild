@@ -32,7 +32,9 @@ DEPEND="
 	system-harfbuzz? ( media-libs/harfbuzz dev-libs/fribidi )
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="
+	app-arch/zip
+"
 
 src_configure() {
 	local mycmakeargs=(
