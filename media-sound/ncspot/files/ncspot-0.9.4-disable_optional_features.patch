@@ -1,0 +1,18 @@
+--- a/Cargo.toml	2022-01-06 23:25:56.733455120 -0500
++++ b/Cargo.toml	2022-01-06 23:28:50.160132750 -0500
+@@ -62,11 +62,11 @@
+ share_clipboard = ["clipboard"]
+ wayland_clipboard = ["wl-clipboard-rs"] # Support wayland clipboard - linux only
+ share_selection = ["clipboard", "wl-clipboard-rs"] # Use the primary selection for sharing - linux only
+-alsa_backend = ["librespot-playback/alsa-backend"]
++#alsa_backend = ["librespot-playback/alsa-backend"]
+ pulseaudio_backend = ["librespot-playback/pulseaudio-backend"]
+-rodio_backend = ["librespot-playback/rodio-backend"]
+-portaudio_backend = ["librespot-playback/portaudio-backend"]
+-termion_backend = ["cursive/termion-backend"]
++#rodio_backend = ["librespot-playback/rodio-backend"]
++#portaudio_backend = ["librespot-playback/portaudio-backend"]
++#termion_backend = ["cursive/termion-backend"]
+ pancurses_backend = ["cursive/pancurses-backend"]
+ mpris = ["dbus", "dbus-tree"]
+ notify = ["notify-rust"]
