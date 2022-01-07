@@ -32,7 +32,9 @@ DEPEND="
 	system-harfbuzz? ( media-libs/harfbuzz dev-libs/fribidi )
 "
 RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="
+	app-arch/zip
+"
 
 src_configure() {
 	local mycmakeargs=(
@@ -44,6 +46,7 @@ src_configure() {
 		-DENABLE_HARFBUZZ=ON
 		-DENABLE_HARFBUZZ_MINIMAL=$(usex system-harfbuzz OFF ON)
 		-DENABLE_FRIBIDI_BUILD=$(usex system-harfbuzz OFF ON)
+		-DENABLE_POPUP_MENUS=OFF # workaround bug 352 https://github.com/skyjake/lagrange/issues/352
 	)
 
 	cmake_src_configure
