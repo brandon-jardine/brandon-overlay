@@ -117,3 +117,7 @@ SRC_URI="$(cargo_crate_uris)"
 LICENSE="Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD MIT Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
+
+src_configure() {
+	cargo_src_configure --bin gping
+}
