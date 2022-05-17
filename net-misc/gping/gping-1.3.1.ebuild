@@ -101,6 +101,7 @@ CRATES="
 	windows_x86_64_gnu-0.32.0
 	windows_x86_64_msvc-0.32.0
 	winping-0.10.1
+	pinger-0.4.1
 	${P}
 "
 
@@ -117,7 +118,3 @@ SRC_URI="$(cargo_crate_uris)"
 LICENSE="Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD MIT Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="~amd64"
-
-src_configure() {
-	cargo_src_configure --bin gping
-}
