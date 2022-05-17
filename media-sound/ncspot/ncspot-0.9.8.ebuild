@@ -387,7 +387,6 @@ KEYWORDS="~amd64"
 
 src_configure() {
 	local myfeatures=(
-		share_clipboard
 		wayland_clipboard
 		share_selection
 		pulseaudio_backend
