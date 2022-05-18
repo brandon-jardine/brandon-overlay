@@ -8,6 +8,7 @@ inherit qmake-utils
 DESCRIPTION="desktop application for updating Flipper Zero firmware"
 HOMEPAGE="https://update.flipperzero.one/"
 LICENSE="GPL-3+"
+SLOT="0"
 
 if [ "${PV}" = "9999" ]; then
 	inherit git-r3
