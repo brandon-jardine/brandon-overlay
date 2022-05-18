@@ -20,7 +20,7 @@ fi
 
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="mp3 system-harfbuzz"
+IUSE="mp3 system-harfbuzz curses"
 
 DEPEND="
 	dev-libs/libpcre
@@ -36,6 +36,7 @@ BDEPEND=""
 
 src_configure() {
 	local mycmakeargs=(
+		-DENABLE_TUI=$(usex curses)
 		-DENABLE_MPG123=$(usex mp3)
 		-DENABLE_IDLE_SLEEP=OFF # Improves performance
 		-DENABLE_KERNING=ON
