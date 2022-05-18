@@ -27,7 +27,7 @@ DEPEND="
 	dev-libs/libunistring
 	dev-libs/openssl
 	media-libs/libsdl2
-	webp? ( media-libs/webp )
+	webp? ( media-libs/libwebp )
 	mp3? ( media-sound/mpg123 )
 	sys-libs/zlib
 	system-harfbuzz? ( media-libs/harfbuzz dev-libs/fribidi )
