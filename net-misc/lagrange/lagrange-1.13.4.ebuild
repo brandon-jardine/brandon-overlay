@@ -20,13 +20,14 @@ fi
 
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="mp3 system-harfbuzz curses"
+IUSE="mp3 system-harfbuzz webp"
 
 DEPEND="
 	dev-libs/libpcre
 	dev-libs/libunistring
 	dev-libs/openssl
 	media-libs/libsdl2
+	webp? ( media-libs/webp )
 	mp3? ( media-sound/mpg123 )
 	sys-libs/zlib
 	system-harfbuzz? ( media-libs/harfbuzz dev-libs/fribidi )
@@ -38,8 +39,8 @@ BDEPEND="
 
 src_configure() {
 	local mycmakeargs=(
-		-DENABLE_TUI=$(usex curses)
 		-DENABLE_MPG123=$(usex mp3)
+		-DENABLE_WEBP=$(usex webp)
 		-DENABLE_IDLE_SLEEP=OFF # Improves performance
 		-DENABLE_KERNING=ON
 		-DENABLE_DOWNLOAD_EDIT=ON
