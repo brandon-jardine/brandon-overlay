@@ -42,3 +42,13 @@ src_configure() {
 src_install() {
 	emake PREFIX="${ED}/usr" install
 }
+
+pkg_postint() {
+	xdg_desktop_database_update
+	xdg_icon_cache_update
+}
+
+pkg_postrm() {
+	xdg_desktop_database_update
+	xdg_icon_cache_update
+}
