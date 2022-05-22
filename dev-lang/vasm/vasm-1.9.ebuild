@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="A portable and retargetable assembler."
 HOMEPAGE="http://sun.hasenbraten.de/vasm"
-SRC_URI="http://sun.hasenbraten.de/vasm/release/vasm.tar.gz"
+SRC_URI="http://phoenix.owl.de/tags/vasm1_9.tar.gz"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="VASM"
