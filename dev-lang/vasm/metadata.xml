@@ -7,6 +7,21 @@
     <flag name="syntax-mot">Enable binaries for Motorola asm syntax.</flag>
     <flag name="syntax-oldstyle">Enable binaries for oldstyle syntax suitable for some 8-bit CPUs (6502, 680x, 68HC1x, Z80, etc.).</flag>
     <flag name="syntax-test">Enable test syntax binaries.</flag>
+    <flag name="cpu-6502">Enable 6502 output binaries.</flag>
+    <flag name="cpu-6800">Enable 6800 output binaries.</flag>
+    <flag name="cpu-6809">Enable 6809 output binaries.</flag>
+    <flag name="cpu-arm">Enable arm output binaries.</flag>
+    <flag name="cpu-c16x">Enable c16x/st10 output binaries.</flag>
+    <flag name="cpu-jagrisc">Enable Atari Jaguar output binaries.</flag>
+    <flag name="cpu-m68k">Enable Motorola 68000 output binaries.</flag>
+    <flag name="cpu-pdp11">Enable DEC PDP-11 output binaries.</flag>
+    <flag name="cpu-ppc">Enable PowerPC output binaries.</flag>
+    <flag name="cpu-qnice">Enable qnice output binaries.</flag>
+    <flag name="cpu-test">Enable test output binaries.</flag>
+    <flag name="cpu-tr3200">Enable TR3200 output binaries.</flag>
+    <flag name="cpu-vidcore">Enable vidcore output binaries.</flag>
+    <flag name="cpu-x86">Enable x86 output binaries.</flag>
+    <flag name="cpu-z80">Enable Zilog Z80 output binaries.</flag>
   </use>
 </pkgmetadata>
 
