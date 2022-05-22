@@ -9,7 +9,7 @@ SRC_URI="http://sun.hasenbraten.de/vasm/release/vasm.tar.gz"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="VASM"
-IUSE="syntax-std syntax-madmac syntax-moc syntax-oldstyle syntax-test"
+IUSE="syntax-std syntax-madmac syntax-mot syntax-oldstyle syntax-test"
 
 CPUS=('6502' '6800' '6809' 'arm' 'c16x' 'jagrisc' 'm68k' 'pdp11' 'ppc' 'qnice' 'test' 'tr3200' 'vidcore' 'x86' 'z80')
 SYNTAX=(

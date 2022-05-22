@@ -4,7 +4,7 @@
   <use>
     <flag name="syntax-std">Enable binaries for standard asm syntax.</flag>
     <flag name="syntax-madmac">Enable binaries for MadMac asm syntax.</flag>
-    <flag name="syntax-moc">Enable binaries for Motorola asm syntax.</flag>
+    <flag name="syntax-mot">Enable binaries for Motorola asm syntax.</flag>
     <flag name="syntax-oldstyle">Enable binaries for oldstyle syntax suitable for some 8-bit CPUs (6502, 680x, 68HC1x, Z80, etc.).</flag>
     <flag name="syntax-test">Enable test syntax binaries.</flag>
   </use>
