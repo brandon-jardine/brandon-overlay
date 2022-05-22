@@ -9,13 +9,20 @@ SRC_URI="http://sun.hasenbraten.de/vasm/release/vasm.tar.gz"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="VASM"
+IUSE="syntax-std syntax-madmac syntax-moc syntax-oldstyle syntax-test"
 
 CPUS=('6502' '6800' '6809' 'arm' 'c16x' 'jagrisc' 'm68k' 'pdp11' 'ppc' 'qnice' 'test' 'tr3200' 'vidcore' 'x86' 'z80')
-SYNTAX=('std' 'madmac' 'mot' 'oldstyle' 'test')
+SYNTAX=(
+	'std'
+	'madmac'
+	'mot'
+	'oldstyle'
+	'test'
+)
 
 src_unpack() {
 	default_src_unpack
-	mv ${WORKDIR}/${PN} ${WORKDIR}/${P}
+	mv "${WORKDIR}/${PN}" "${WORKDIR}/${P}"
 }
 
 src_configure() {
@@ -27,7 +34,10 @@ src_compile() {
 	do
 		for s in "${SYNTAX[@]}"
 		do
-			emake CPU=$c SYNTAX=$s
+			if use syntax-${s}
+			then
+				emake CPU=$c SYNTAX=$s
+			fi
 		done
 	done
 }
@@ -37,7 +47,10 @@ src_install() {
 	do
 		for s in "${SYNTAX[@]}"
 		do
-			dobin "vasm${c}_${s}"
+			if use syntax-${s}
+			then
+				dobin "vasm${c}_${s}"
+			fi
 		done
 	done
 }
